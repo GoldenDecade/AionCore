@@ -3,9 +3,9 @@ name: Sync fork with upstream
 # Keeps this fork up to date with iOfficeAI/AionCore automatically.
 on:
   schedule:
-    # Every day at 03:00 UTC. GitHub Actions cron always uses UTC.
-    # For 03:00 Beijing time (UTC+8), change this to: '0 19 * * *'
-    - cron: '0 3 * * *'
+    # Runs every day at 03:00 Beijing time (UTC+8).
+    # GitHub Actions cron uses UTC only, so 03:00 UTC+8 == 19:00 UTC (previous day).
+    - cron: '0 19 * * *'
   workflow_dispatch: {}
 
 permissions:
